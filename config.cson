@@ -1,0 +1,144 @@
+"*":
+  autocomplete:
+    includeCompletionsFromAllBuffers: true
+  "autocomplete-plus":
+    confirmCompletion: "enter"
+    navigateCompletions: "ctrl-p,ctrl-n"
+    scopeBlacklist: [
+      ".comment"
+    ]
+    strictMatching: true
+    useAlternateScoring: true
+  autosave:
+    enabled: true
+  core:
+    audioBeep: false
+    destroyEmptyPanes: false
+    disabledPackages: [
+      "jshint"
+      "welcome"
+      "linter-jscs"
+      "linter-jshint"
+      "aligner"
+      "atom-beautify"
+      "color-picker"
+      "editorconfig"
+      "git-plus"
+      "language-ini"
+      "linter-slim"
+      "pigments"
+      "atom-handlebars"
+      "language-toml"
+      "metrics"
+      "keybinding-resolver"
+      "bookmarks"
+      "background-tips"
+      "autoflow"
+      "exception-reporting"
+      "ink"
+      "julia-client"
+      "latex-completions"
+      "uber-juno"
+      "tool-bar"
+      "linter-eslint"
+      "linter-scss-lint"
+      "linter-ruby"
+      "linter-less"
+      "linter-csslint"
+    ]
+    "file-types":
+      "": {}
+      ".env$": "source.shell"
+    followSymlinks: false
+    ignoredNames: [
+      ".DS_Store"
+      ".git"
+      "tmp/*"
+      "dist/*"
+    ]
+    projectHome: "/src"
+    themes: [
+      "unity-ui"
+      "spacegray-light-syntax"
+    ]
+  "cursor-history":
+    excludeClosedBuffer: true
+    flashOnLand: true
+    flashType: "point"
+    keepSingleEntryPerBuffer: true
+    searchAllPanes: false
+  editor:
+    confirmCheckoutHeadRevision: false
+    invisibles:
+      eol: " "
+      space: " "
+    scrollPastEnd: true
+    showIndentGuide: true
+    showInvisibles: true
+  "file-icons":
+    coloured: false
+  "git-diff": {}
+  "highlight-line":
+    hideHighlightOnSelect: true
+  "highlight-selected":
+    hideHighlightOnSelectedWord: true
+  "julia-client":
+    enableMenu: true
+    errorNotifications: false
+    launchOnStartup: false
+    notifications: false
+  linter:
+    lintOnEditorFocus: false
+    lintOnSave: false
+    showErrorPanel: false
+    showInfoMessages: true
+    subtleLinterErrors: [
+      "jshint"
+    ]
+  "linter-eslint":
+    disableWhenNoEslintrcFileInPath: false
+  "linter-jscs":
+    displayAs: "warning"
+    onlyConfig: true
+  "linter-jshint":
+    disableWhenNoJshintrcFileInPath: true
+    jshintExecutablePath: "/usr/local/bin/jshint"
+  "linter-less":
+    ignoreUndefinedVariables: true
+    includePath: [
+      "./app/styles"
+    ]
+  "linter-scss-lint":
+    additionalArguments: "--exclude-linter PropertySortOrder --exclude-linter SelectorFormat"
+  "local-history": {}
+  minimap:
+    minimapScrollIndicator: false
+    plugins:
+      "find-and-replace": true
+      "find-and-replaceDecorationsZIndex": 0
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+  pigments: {}
+  "release-notes":
+    viewedVersion: "0.94.0"
+  "tool-bar":
+    position: "Left"
+  "tree-view":
+    alwaysOpenExisting: true
+  "uber-juno":
+    disable: true
+  "unity-ui":
+    colorStatusIndicatorsInTreeView: true
+    showIcons: true
+  "vim-mode-plus":
+    clearHighlightSearchOnResetNormalMode: true
+    clearMultipleCursorsOnEscapeInsertMode: true
+    highlightSearch: true
+    incrementalSearch: true
+    useSmartcaseForSearch: true
+    wrapLeftRightMotion: true
+  welcome:
+    showOnStartup: false
+  whitespace: {}

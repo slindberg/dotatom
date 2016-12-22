@@ -1,0 +1,71 @@
+# Your keymap
+#
+# Atom keymaps work similarly to stylesheets. Just as stylesheets use selectors
+# to apply styles to elements, Atom keymaps use selectors to associate
+# keystrokes with events in specific contexts.
+#
+# You can create a new keybinding in this file by typing "key" and then hitting
+# tab.
+#
+# Here's an example taken from Atom's built-in keymap:
+#
+# '.editor':
+#   'enter': 'editor:newline'
+#
+# '.workspace':
+#   'ctrl-P': 'core:move-up'
+#   'ctrl-p': 'core:move-down'
+#
+
+# Use ctrl-c to close tabs
+'body':
+  'ctrl-c': 'core:close'
+  'ZZ': 'core:close'
+
+# Open the fuzzy finder for the current tab with cmd-o, instead of the open file dialog
+'.platform-darwin':
+  'cmd-o': 'fuzzy-finder:toggle-file-finder'
+
+# Overrided the ctrl-k binding so that it can be used for navigation in dialogs
+'atom-text-editor':
+  'ctrl-k': 'unset!'
+
+# Use vim navigation for list selection navigation ('.fuzzy-finder', '.command-palette')
+'.select-list':
+  'ctrl-j': 'core:move-down'
+  'ctrl-k': 'core:move-up'
+
+# Tree View overrides to match NERDTree menu
+'.tree-view':
+  'd': 'tree-view:remove'
+  'c': 'tree-view:duplicate'
+  't': 'tree-view:open-selected-entry'
+  'o': 'tree-view:expand-directory'
+  'h': '!unset'
+  'shift-O': 'tree-view:recursive-expand-directory'
+  'x': 'tree-view:collapse-directory'
+  'shift-X': 'tree-view:recursive-collapse-directory'
+
+# Remap pane switching vim-style, doesn't work with tree view :(
+'atom-text-editor.vim-mode-plus:not(.insert-mode)':
+  'ctrl-h': 'vim-mode-plus:focus-pane-view-on-left'
+  'ctrl-j': 'vim-mode-plus:focus-pane-view-below'
+  'ctrl-k': 'vim-mode-plus:focus-pane-view-above'
+  'ctrl-l': 'vim-mode-plus:focus-pane-view-on-right'
+
+# Use tab to navigate autocomplete selection, enter to select
+'atom-text-editor:not(mini).autocomplete-active':
+  'tab': 'core:move-down'
+  'shift-tab': 'core:move-up'
+
+# Use cursor-history plugin to mimic vim jumplist
+# Editor command: insert newline below without leaving command mode
+'atom-text-editor.vim-mode-plus.normal-mode':
+  'ctrl-i': 'cursor-history:next-within-editor'
+  'ctrl-o': 'cursor-history:prev-within-editor'
+  'ctrl-n': 'editor:newline-below'
+
+# Move lines up and down in visual mode
+'atom-text-editor.vim-mode-plus.visual-mode':
+  'shift-k': 'vim-mode-plus-user:move-selected-text-up'
+  'shift-j': 'vim-mode-plus-user:move-selected-text-down'

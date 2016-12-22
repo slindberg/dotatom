@@ -1,0 +1,86 @@
+/*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed.
+ *
+ * If you are unfamiliar with LESS, you can read more about it here:
+ * http://www.lesscss.org
+ */
+
+@highlight: #ec4778;
+
+.tree-view {
+  font-size: 13px;
+}
+
+.tab-bar {
+  .tab {
+    // Make the tab titles a little bigger
+    font-size: 1.2em;
+  }
+}
+
+atom-text-editor,
+atom-text-editor::shadow {
+  .wrap-guide {
+    // Tone down the preferred line length rule
+    opacity: 0.25
+  }
+
+  .gutter .line-number {
+    // Make git gutter annotations wider
+    &.git-line-added,
+    &.git-line-modified {
+      border-left-width: 5px; // default is 2px
+      padding-left: ~"calc(0.5em - 5px)"
+    }
+  }
+
+  .indent-guide {
+    // Tone down indent guides
+    opacity: 0.25
+  }
+
+  .highlights .highlight-selected .region {
+    // Make highlight selections more readable
+    border-color: @highlight;
+  }
+
+  .line.highlight-line {
+    // Tone down the cursor line highlight
+    background-color: rgba(0, 0, 0, 0.05) !important;
+    // opacity: 0.25
+  }
+
+  .bracket-matcher .region {
+    // Maked bracket highlight actually visible
+    border: solid 1px @highlight;
+  }
+
+  .cursor {
+
+  }
+}
+
+.minimap {
+  // Show a border since it always cuts off text
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+
+  // Match the highlight color on the minimap
+  .highlight-selected {
+    background: @highlight;
+  }
+}
+
+.status-bar {
+  // Make status bar font more readable
+  font-size: 14px;
+}
+
+// Don't underline handlebars, gross
+atom-text-editor::shadow {
+  .entity.name.tag.handlebars {
+    text-decoration: none;
+  }
+}
